@@ -1,3 +1,8 @@
+// Idea by Diksha(make binary search , check for element on left and right , then return mid)
+
+// Coded By The Devansh Srivastava
+
+
 class Solution {
     public int majorityElement(int[] nums) {
         
