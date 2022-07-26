@@ -1,35 +1,16 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-       // [3,2,4] 6
-       int fi=0;
-        int si=0;
-        boolean flag=false;
-        for(int i=0;i<nums.length;i++){
-            int first=nums[i];      //3
-            int second=target-first;        //3
-            fi=i;
-            for(int j=0;j<nums.length;j++){
-               if(i==j)
-                   continue;
-                if(second==nums[j]){
-                    
-                    si=j;
-                    flag=true;
-                    break;
+        
+        for(int i=0;i<nums.length-1;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]+nums[j]==target){
+                    return new int []{i,j};      // making a new arr and returning it
                     
                 }
+            }
                 
-            }
-            if(flag){
-                break;
-            }
-            
         }
-        int [] arr=new int[2];
-        arr[0]=fi;
-        arr[1]=si;
-        return arr;
+        return new int []{0,0};
         
-        }
     }
-
+}
